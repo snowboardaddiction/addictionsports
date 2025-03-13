@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     width: 100%;
     display: flex;
-    font-family: 'Montserrat', sans-serif; /* Ensure the correct typeface */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat Black */
 }
 
 /* Container for the split layout */
@@ -64,17 +64,16 @@ html, body {
 
 /* Logo Styling */
 .logo {
-    width: 150px; /* Proper scaling */
+    width: 180px; /* Slightly larger for better visibility */
     height: auto;
     display: block;
-    fill: white; /* Ensure logos are white */
 }
 
-/* Ensure the SVG fills correctly */
+/* Ensure the SVG inside the logo is properly colored */
 .logo svg {
     width: 100%;
     height: auto;
-    fill: white; /* Override fill color if needed */
+    fill: white !important; /* Forces the logo to be white */
 }
 
 /* Text Styling */
@@ -101,7 +100,7 @@ html, body {
     }
 
     .logo {
-        width: 100px; /* Reduce logo size for mobile */
+        width: 120px; /* Reduce logo size for mobile */
     }
 
     .text-overlay {
