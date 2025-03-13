@@ -65,7 +65,7 @@ html, body {
     z-index: 2;  /* Ensures text stays above darken effect */
     
     /* Remove black box, add text shadow for contrast */
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Mobile Responsive: Stack Images Vertically */
