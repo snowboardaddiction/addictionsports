@@ -57,7 +57,7 @@ html, body {
 /* Text Overlay - Styled Without Box */
 .text-overlay {
     color: white;
-    font-size: 4rem;
+     font-size: clamp(1.5rem, 4vw, 4rem);
     font-weight: 900; /* Montserrat Black */
     text-align: center;
     text-transform: uppercase; /* Optional: Makes text all caps */
