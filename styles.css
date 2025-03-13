@@ -45,4 +45,11 @@ html, body {
         flex-direction: column;
     }
 
-    .split {
+   .split {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.split:hover {
+    transform: scale(1.05); /* Slight zoom */
+    filter: brightness(80%); /* Darken effect */
+}
