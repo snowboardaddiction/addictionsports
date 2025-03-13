@@ -68,6 +68,7 @@ html, body {
     width: auto;
     height: auto;
     margin-bottom: 10px;
+    filter: invert(1);
 }
 
 /* Text Overlay - Styled Without Box */
