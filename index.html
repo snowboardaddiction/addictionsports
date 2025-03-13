@@ -3,47 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Split Image Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            height: 100vh;
-        }
-        .container {
-            display: flex;
-            width: 100%;
-        }
-        .side {
-            flex: 1;
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-        }
-        .left {
-            background-image: url('left-image.jpg');
-        }
-        .right {
-            background-image: url('right-image.jpg');
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .side {
-                height: 50vh;
-            }
-        }
-    </style>
+    <title>Split Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="side left"></div>
-        <div class="side right"></div>
+        <div class="image-section left">
+            <img src="left-image.jpg" alt="Left Image">
+        </div>
+        <div class="image-section right">
+            <img src="right-image.jpg" alt="Right Image">
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
