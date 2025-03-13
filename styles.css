@@ -26,6 +26,15 @@ html, body {
     background-size: cover; /* Ensures image covers section */
     background-position: center; /* Centers image focus */
     background-repeat: no-repeat;
+
+    /* Hover Transition */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect - Slight Zoom & Darken */
+.split:hover {
+    transform: scale(1.05); /* Slight zoom */
+    filter: brightness(80%); /* Darken effect */
 }
 
 /* Text Overlay on Images */
@@ -37,6 +46,7 @@ html, body {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 5px;
+    position: absolute;
 }
 
 /* Mobile Responsive: Stack Images Vertically */
@@ -45,11 +55,14 @@ html, body {
         flex-direction: column;
     }
 
-   .split {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
+    .split {
+        width: 100%;
+        height: 50vh; /* Each section takes up half the screen height */
+    }
 
-.split:hover {
-    transform: scale(1.05); /* Slight zoom */
-    filter: brightness(80%); /* Darken effect */
+    /* Disable Hover Effects on Mobile */
+    .split:hover {
+        transform: none;
+        filter: none;
+    }
 }
