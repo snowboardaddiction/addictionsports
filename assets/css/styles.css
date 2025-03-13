@@ -84,6 +84,13 @@ html, body {
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* SVG Logo Styling - Ensure Logos are Displayed Correctly */
+.ski-logo svg, .sa-logo svg {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    fill: white; /* Ensures logos are white */
+}
+
 /* Mobile Responsive: Stack Images Vertically */
 @media (max-width: 768px) {
     .container {
