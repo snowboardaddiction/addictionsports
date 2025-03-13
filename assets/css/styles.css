@@ -26,7 +26,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-direction: column; /* Aligns content (logo + text) vertically */
+
     /* Background Image Styling */
     background-size: cover;
     background-position: center;
@@ -54,6 +55,21 @@ html, body {
     background: rgba(0, 0, 0, 0.3); /* Darkens on hover */
 }
 
+/* Centering Content (Logo + Text) */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Logo Styling */
+.logo {
+    width: 80px;  /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
 /* Text Overlay - Styled Without Box */
 .text-overlay {
     color: white;
@@ -62,8 +78,6 @@ html, body {
     text-align: center;
     text-transform: uppercase; /* Optional: Makes text all caps */
     letter-spacing: 2px; /* Adds spacing for a clean look */
-    position: absolute;
-    z-index: 2;  /* Ensures text stays above darken effect */
     
     /* Remove black box, add text shadow for contrast */
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
@@ -73,21 +87,26 @@ html, body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+    }
     .text-overlay {
         font-size: 4rem;
     }
-
     .split {
         width: 100%;
         height: 50vh; /* Each section takes up half the screen height */
     }
-
     /* Disable Hover Effects on Mobile */
     .split:hover {
         transform: none;
     }
-        @media (max-width: 480px) {
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
     .text-overlay {
         font-size: 2rem; /* Keep it large enough for small screens */
+    }
+    .logo {
+        width: 60px; /* Adjust logo size for small screens */
     }
 }
