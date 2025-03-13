@@ -8,14 +8,14 @@ html, body {
     height: 100%;
     width: 100%;
     display: flex;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat Black */
 }
 
 /* Container for the two sections */
 .container {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     overflow: hidden;
 }
 
@@ -26,6 +26,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    /* Background Image Styling */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +41,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0); /* Initially transparent */
     transition: background 0.3s ease-in-out;
 }
 
@@ -49,10 +51,10 @@ html, body {
 }
 
 .split:hover .overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3); /* Darkens on hover */
 }
 
-/* Centered Content */
+/* Content Box (Logo + Text) */
 .content {
     position: relative;
     text-align: center;
@@ -62,22 +64,23 @@ html, body {
     align-items: center;
 }
 
-/* Logo Styling - Responsive & Consistent */
+/* Logo Styling */
 .logo {
-    max-width: 15vw; /* Adjust this for ideal size */
-    max-width: 150px;
+    width: 150px; /* Ensure consistent size */
     height: auto;
-    margin-bottom: 10px;
-    fill: white;
+    fill: white; /* Apply color */
 }
 
 /* Text Overlay - Styled Without Box */
 .text-overlay {
     color: white;
     font-size: 4vw;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 900; /* Montserrat Black */
+    text-align: center;
+    text-transform: uppercase; /* Optional: Makes text all caps */
+    letter-spacing: 2px; /* Adds spacing for a clean look */
+    
+    /* Remove black box, add text shadow for contrast */
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -89,26 +92,20 @@ html, body {
 
     .split {
         width: 100%;
-        height: 50vh;
+        height: 50vh; /* Each section takes up half the screen height */
     }
 
-    /* Increase text size for better readability */
+    .logo {
+        width: 100px; /* Adjust logo size for mobile */
+    }
+
     .text-overlay {
         font-size: 4rem;
-    }
-
-    /* Adjust logo size for smaller screens */
-    .logo {
-        max-width: 22%;
     }
 }
 
 @media (max-width: 480px) {
     .text-overlay {
-        font-size: 2rem;
-    }
-
-    .logo {
-        max-width: 30%;
+        font-size: 2rem; /* Keep it large enough for small screens */
     }
 }
