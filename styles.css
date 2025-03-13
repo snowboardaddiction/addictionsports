@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     display: flex;
 }
 
@@ -10,7 +11,7 @@ html, body {
 .container {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
 }
 
 /* 50/50 Split Sections */
@@ -21,11 +22,10 @@ html, body {
     justify-content: center;
     align-items: center;
     
-    /* Background Image Settings */
-    background-size: cover; /* Ensures it fills the section */
-    background-position: center; /* Centers the most important part */
+    /* Background Image Styling */
+    background-size: cover; /* Ensures image covers section */
+    background-position: center; /* Centers image focus */
     background-repeat: no-repeat;
-    height: 100vh; /* Ensures it takes full height */
 }
 
 /* Text Overlay on Images */
@@ -47,6 +47,6 @@ html, body {
 
     .split {
         width: 100%;
-        height: 50vh; /* Makes each image take half the screen */
+        height: 50vh; /* Each image takes half screen height */
     }
 }
