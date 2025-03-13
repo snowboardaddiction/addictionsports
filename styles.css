@@ -23,21 +23,21 @@ html, body {
     align-items: center;
     
     /* Background Image Styling */
-    background-size: cover; /* Ensures image covers section */
-    background-position: center; /* Centers image focus */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-
-    /* Hover Transition */
-    transition: transform 0.3s ease, filter 0.3s ease;
+    
+    /* Transition for Hover Effect */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 /* Hover Effect - Slight Zoom & Darken */
 .split:hover {
-    transform: scale(1.05); /* Slight zoom */
-    filter: brightness(80%); /* Darken effect */
+    transform: scale(1.05);
+    filter: brightness(70%);
 }
 
-/* Text Overlay on Images */
+/* Text Overlay on Images - Stays Above Darken Effect */
 .text-overlay {
     color: white;
     font-size: 2rem;
@@ -47,6 +47,7 @@ html, body {
     padding: 10px 20px;
     border-radius: 5px;
     position: absolute;
+    z-index: 2;  /* Ensures text stays above hover effect */
 }
 
 /* Mobile Responsive: Stack Images Vertically */
