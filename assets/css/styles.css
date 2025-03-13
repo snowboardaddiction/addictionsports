@@ -64,11 +64,11 @@ html, body {
 
 /* Logo Styling - Responsive & Consistent */
 .logo {
-    max-width: 15%; /* Adjust this for ideal size */
-    width: auto;
+    max-width: 15vw; /* Adjust this for ideal size */
+    max-width: 150px;
     height: auto;
     margin-bottom: 10px;
-    filter: invert(1);
+    fill: white;
 }
 
 /* Text Overlay - Styled Without Box */
