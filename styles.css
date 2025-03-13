@@ -52,7 +52,7 @@ html, body {
 /* Text Overlay on Images - Stays Above Darken Effect */
 .text-overlay {
     color: white;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
