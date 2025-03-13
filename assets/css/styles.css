@@ -1,21 +1,21 @@
 /* Import Montserrat Black from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
-/* Reset & Full-Page Flex Layout */
+/* Reset and Full-Page Flex Layout */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     display: flex;
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat Black */
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Container for the split layout */
+/* Container for the two sections */
 .container {
     display: flex;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -52,7 +52,7 @@ html, body {
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* Content Box (Logo + Text) */
+/* Centered Content */
 .content {
     position: relative;
     text-align: center;
@@ -62,33 +62,25 @@ html, body {
     align-items: center;
 }
 
-/* Logo Styling */
+/* Logo Styling - Responsive & Consistent */
 .logo {
-    width: 180px; /* Slightly larger for better visibility */
+    max-width: 15%; /* Adjust this for ideal size */
+    width: auto;
     height: auto;
-    display: block;
+    margin-bottom: 10px;
 }
 
-/* Ensure the SVG inside the logo is properly colored */
-.logo svg {
-    width: 100%;
-    height: auto;
-    fill: white !important; /* Forces the logo to be white */
-}
-
-/* Text Styling */
+/* Text Overlay - Styled Without Box */
 .text-overlay {
     color: white;
     font-size: 4vw;
     font-weight: 900;
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
-    margin-top: 15px;
 }
 
-/* Mobile Responsive Fixes */
+/* Mobile Responsive: Stack Images Vertically */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -99,17 +91,23 @@ html, body {
         height: 50vh;
     }
 
-    .logo {
-        width: 120px; /* Reduce logo size for mobile */
+    /* Increase text size for better readability */
+    .text-overlay {
+        font-size: 4rem;
     }
 
-    .text-overlay {
-        font-size: 3rem;
+    /* Adjust logo size for smaller screens */
+    .logo {
+        max-width: 22%;
     }
 }
 
 @media (max-width: 480px) {
     .text-overlay {
         font-size: 2rem;
+    }
+
+    .logo {
+        max-width: 30%;
     }
 }
