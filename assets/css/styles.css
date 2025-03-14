@@ -69,6 +69,8 @@ html, body {
     object-fit: contain;
     display: block;
     margin-bottom: 10px;
+    filter: invert(1);
+
 }
 
 /* Text Overlay - Styled Without Box */
