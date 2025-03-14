@@ -108,7 +108,13 @@ html, body {
     .text-overlay {
         font-size: 2rem;
     }
-
+ .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
     .logo {
         width: auto;
         max-height: 20vh;
