@@ -111,8 +111,8 @@ html, body {
     }
 
     .logo {
-        width: auto;
-        height: 80px;
-        max-width: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
     }
 }
