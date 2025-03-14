@@ -111,7 +111,7 @@ html, body {
 
     .logo {
         width: auto;
-        height: 50%;
+        height: 150px;
         object-fit: contain;
     }
 }
