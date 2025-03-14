@@ -118,7 +118,7 @@ html, body {
         position: relative;
     }
     .logo {
-        width: auto;
+        width: 20vw;
         max-height: 12vh;
         height: auto;
         object-fit: contain;
