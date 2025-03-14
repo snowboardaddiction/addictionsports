@@ -64,7 +64,7 @@ html, body {
 
 /* Logo Styling - Responsive & Consistent */
 .logo {
-    width: 150px;
+    width: auto;
     height: auto;
     object-fit: contain;
     display: block;
