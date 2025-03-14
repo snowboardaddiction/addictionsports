@@ -65,7 +65,7 @@ html, body {
 /* Logo Styling - Responsive & Consistent */
 .logo {
     width: 150px;
-    max-width: 15%; /* Adjust this for ideal size */
+    max-width: 100%; /* Adjust this for ideal size */
     height: auto;
     margin-bottom: 10px;
 }
