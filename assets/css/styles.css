@@ -64,7 +64,7 @@ html, body {
 
 /* Logo Styling - Responsive & Consistent */
 .logo {
-    width: auto;
+    width: 12vw;
     height: auto;
     object-fit: contain;
     display: block;
@@ -99,8 +99,8 @@ html, body {
 
     /* Adjust logo size for smaller screens */
     .logo {
-        width: 120px;
-        max-width: 22%;
+        width: 12vw;
+        max-width: 100%;
     }
 }
 
