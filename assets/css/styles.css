@@ -111,7 +111,7 @@ html, body {
     }
 
     .logo {
-        width: 50%;
-        max-width: 150px;
+        width: 150px;
+        max-width: 50%;
     }
 }
