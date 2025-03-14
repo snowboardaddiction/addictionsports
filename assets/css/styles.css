@@ -67,6 +67,8 @@ html, body {
     width: 150px;
     max-width: 100%; /* Adjust this for ideal size */
     height: auto;
+    object-fit: contain;
+    display: block;
     margin-bottom: 10px;
 }
 
@@ -98,8 +100,8 @@ html, body {
 
     /* Adjust logo size for smaller screens */
     .logo {
-        width: 22%;
-        max-width: 120px;
+        width: 120px;
+        max-width: 22%;
     }
 }
 
