@@ -117,7 +117,7 @@ html, body {
     }
     .logo {
         width: auto;
-        max-height: 20vh;
+        max-height: 12vh;
         height: auto;
         object-fit: contain;
     }
