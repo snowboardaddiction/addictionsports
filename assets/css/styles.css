@@ -5,17 +5,18 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100dvh;
     width: 100%;
     display: flex;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 /* Container for the two sections */
 .container {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100dvh; /* updated to use dynamic vh */
     overflow: hidden;
 }
 
@@ -32,18 +33,18 @@ html, body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Darken Overlay for Hover Effect */
+/* Darken Overlay */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0); /* default on desktop */
     transition: background 0.3s ease-in-out;
 }
 
-/* Hover Effect - Slight Zoom & Darken */
+/* Hover Effect - Slight Zoom & Darken (Desktop only) */
 .split:hover {
     transform: scale(1.05);
 }
@@ -51,14 +52,17 @@ html, body {
 .split:hover .overlay {
     background: rgba(0, 0, 0, 0.3);
 }
+
+/* Full-clickable area */
 .split a {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 3; /* Higher than overlay and content */
+    z-index: 3;
 }
+
 /* Centered Content */
 .content {
     position: relative;
@@ -69,7 +73,7 @@ html, body {
     align-items: center;
 }
 
-/* Logo Styling - Responsive & Consistent */
+/* Logo Styling */
 .logo {
     width: 12vw;
     height: auto;
@@ -77,10 +81,9 @@ html, body {
     display: block;
     margin-bottom: 10px;
     filter: invert(1);
-
 }
 
-/* Text Overlay - Styled Without Box */
+/* Text Overlay */
 .text-overlay {
     color: white;
     font-size: 4vw;
@@ -90,7 +93,7 @@ html, body {
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Mobile Responsive: Stack Images Vertically */
+/* Responsive: Tablet and Down */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -98,32 +101,30 @@ html, body {
 
     .split {
         width: 100%;
-        height: 50vh;
+        height: 50dvh;
+        transform: none; /* disable hover zoom */
     }
 
-    /* Increase text size for better readability */
+    .overlay {
+        background: rgba(0, 0, 0, 0.1); /* subtle overlay */
+    }
+
     .text-overlay {
         font-size: 3rem;
     }
 
-    /* Adjust logo size for smaller screens */
     .logo {
         width: 12vw;
         max-width: 100%;
     }
 }
 
+/* Responsive: Phones */
 @media (max-width: 480px) {
     .text-overlay {
         font-size: 2rem;
     }
- .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
+
     .logo {
         width: 20vw;
         max-height: 12vh;
@@ -131,15 +132,15 @@ html, body {
         object-fit: contain;
     }
 
-    @media (max-width: 768px) {
-  .overlay {
-    background: rgba(0, 0, 0, 0.1);
-  }
-}
+    .overlay {
+        background: rgba(0, 0, 0, 0.5); /* stronger overlay for small devices */
+    }
 
-@media (max-width: 480px) {
-  .overlay {
-    background: rgba(0, 0, 0, 0.5);
-  }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
 }
-
