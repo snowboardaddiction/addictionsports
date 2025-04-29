@@ -130,4 +130,16 @@ html, body {
         height: auto;
         object-fit: contain;
     }
+
+    @media (max-width: 768px) {
+  .overlay {
+    background: rgba(0, 0, 0, 0.1);
+  }
 }
+
+@media (max-width: 480px) {
+  .overlay {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
