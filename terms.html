@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="2; url=https://snowboardaddiction.com/pages/terms-conditions" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecting...</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
   <style>
@@ -14,9 +15,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       text-align: center;
+      padding: 20px;
     }
 
     .logo-container {
@@ -25,6 +27,7 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
+      flex-wrap: wrap;
     }
 
     .logo-container img {
@@ -34,17 +37,18 @@
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 0.5em;
     }
 
     p {
       font-size: 1rem;
       color: #ccc;
+      max-width: 90%;
     }
 
     a {
-      color: #00bcd4;
+      color: #27aae1;
       text-decoration: none;
       font-weight: bold;
     }
@@ -57,7 +61,7 @@
       margin-top: 20px;
       width: 30px;
       height: 30px;
-      border: 4px solid #00bcd4;
+      border: 4px solid #27aae1;
       border-top: 4px solid transparent;
       border-radius: 50%;
       animation: spin 1s linear infinite;
@@ -66,13 +70,32 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
+    @media (max-width: 480px) {
+      .logo-container img {
+        width: 40px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      .loader {
+        width: 24px;
+        height: 24px;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="logo-container">
-  <img src="assets/images/SA_Mark.svg" alt="Snowboard Addiction Logo">
-  <img src="assets/images/SKI_Mark.svg" alt="Ski Addiction Logo">
-</div>
+  <div class="logo-container">
+    <img src="assets/images/SA_Mark.svg" alt="Snowboard Addiction Logo">
+    <img src="assets/images/SKI_Mark.svg" alt="Ski Addiction Logo">
+  </div>
   <h1>Redirecting you to our Terms & Conditions...</h1>
   <p>If you are not redirected automatically, <a href="https://snowboardaddiction.com/pages/terms-conditions">click here</a>.</p>
   <div class="loader"></div>
