@@ -43,8 +43,9 @@
     .button-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 32px; /* extra space between buttons */
       justify-content: center;
+      margin-top: 20px; /* space below heading */
       width: 100%;
       max-width: 640px;
     }
@@ -52,7 +53,7 @@
     .brand-button {
       flex: 1 1 240px;
       text-align: center;
-      padding: 16px 24px;
+      padding: 18px 28px; /* more height */
       font-size: 1rem;
       font-weight: bold;
       color: #27aae1;
@@ -60,12 +61,13 @@
       border: 2px solid #27aae1;
       border-radius: 9999px; /* pill shape */
       text-decoration: none;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     }
 
     .brand-button:hover {
       background: #27aae1;
       color: #111;
+      box-shadow: 0 0 10px rgba(39, 170, 225, 0.5);
     }
 
     @media (max-width: 480px) {
@@ -78,7 +80,7 @@
       }
 
       .brand-button {
-        padding: 14px 20px;
+        padding: 16px 24px;
         font-size: 0.95rem;
       }
 
