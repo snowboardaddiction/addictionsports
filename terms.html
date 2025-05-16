@@ -6,18 +6,27 @@
   <title>Select Your Brand - Terms & Conditions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
       background: #111;
       color: #fff;
       font-family: 'Montserrat', sans-serif;
+    }
+
+    .wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      margin: 0;
-      text-align: center;
       padding: 20px;
+      text-align: center;
     }
 
     .logo-container {
@@ -42,22 +51,18 @@
 
     .button-group {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
       width: 100%;
-      max-width: 640px;
+      max-width: 400px;
     }
 
     .brand-button {
-      flex: 1 1 auto;
-      min-width: 220px;
-      max-width: 100%;
       width: 100%;
-      padding: 16px 24px;
+      padding: 14px 20px;
       font-size: 1rem;
-      font-weight: bold;
+      font-weight: 800;
       color: #27aae1;
       background: transparent;
       border: 2px solid #27aae1;
@@ -73,43 +78,50 @@
       box-shadow: 0 0 10px rgba(39, 170, 225, 0.5);
     }
 
+    /* Mobile styling */
     @media (max-width: 640px) {
-  .button-group {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 6vw;
-  }
+      .logo-container img {
+        width: 40px;
+      }
 
-  .brand-button {
-    width: 100%;
-    padding: 12px 18px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    border-width: 1.5px;
-  }
+      h1 {
+        font-size: 1.4rem;
+        line-height: 1.4;
+      }
 
-  .logo-container img {
-    width: 36px;
-  }
+      .brand-button {
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 12px 16px;
+      }
+    }
 
-  h1 {
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-}
+    /* Desktop: side-by-side buttons */
+    @media (min-width: 641px) {
+      .button-group {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 600px;
+        gap: 24px;
+      }
 
+      .brand-button {
+        max-width: 240px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="logo-container">
-    <img src="assets/images/SA_Mark.svg" alt="Snowboard Addiction Logo">
-    <img src="assets/images/SKI_Mark.svg" alt="Ski Addiction Logo">
-  </div>
-  <h1>Select your brand to view Terms & Conditions</h1>
-  <div class="button-group">
-    <a href="https://snowboardaddiction.com/pages/terms-conditions" class="brand-button">Snowboard Addiction</a>
-    <a href="https://skiaddiction.com/pages/terms-conditions" class="brand-button">Ski Addiction</a>
+  <div class="wrapper">
+    <div class="logo-container">
+      <img src="assets/images/SA_Mark.svg" alt="Snowboard Addiction Logo">
+      <img src="assets/images/SKI_Mark.svg" alt="Ski Addiction Logo">
+    </div>
+    <h1>Select your brand to view Terms & Conditions</h1>
+    <div class="button-group">
+      <a href="https://snowboardaddiction.com/pages/terms-conditions" class="brand-button">Snowboard Addiction</a>
+      <a href="https://skiaddiction.com/pages/terms-conditions" class="brand-button">Ski Addiction</a>
+    </div>
   </div>
 </body>
 </html>
